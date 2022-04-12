@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var User = require('./db');
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
